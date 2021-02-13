@@ -8,46 +8,46 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(
-              Icons.supervised_user_circle,
-              size: 100.0,
-            ),
-            Text(
-              'Thiago Leal Menezes',
-              style: TextStyle(
-                fontSize: 40.0,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Pacifico',
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(
+                Icons.supervised_user_circle,
+                size: 100.0,
               ),
-            ),
-            Text(
-              'FLUTTER DEVELOPER',
-              style: TextStyle(
-                fontSize: 20.0,
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
-                color: Colors.teal.shade100,
-                fontFamily: 'Source Sans Pro',
+              Text(
+                'Thiago Leal Menezes',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico',
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20.0,
-              width: 250.0,
-              child: Divider(
-                color: Colors.teal.shade100,
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.teal.shade100,
+                  fontFamily: 'Source Sans Pro',
+                ),
               ),
-            ),
-            Card(
+              SizedBox(
+                height: 20.0,
+                width: 250.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
                   onTap: () async {
-                    const phone = 'tel://+55(85)997128622';
+                    const phone = 'tel://+5585997128622';
                     if (await canLaunch(phone)) {
                       await launch(phone);
                     } else {
@@ -66,12 +66,14 @@ class MyApp extends StatelessWidget {
                       fontFamily: 'Source Sans Pro',
                     ),
                   ),
-                )),
-            Card(
+                ),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
                   onTap: () async {
-                    const email = 'mailto:thiago.pixelado@gmail.com?subject=NEW%20JOB&body=Hi,';
+                    const email =
+                        'mailto:thiago.pixelado@gmail.com?subject=NEW%20JOB&body=Hi,';
                     if (await canLaunch(email)) {
                       await launch(email);
                     } else {
@@ -90,9 +92,11 @@ class MyApp extends StatelessWidget {
                       fontFamily: 'Source Sans Pro',
                     ),
                   ),
-                ))
-          ],
-        )),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
